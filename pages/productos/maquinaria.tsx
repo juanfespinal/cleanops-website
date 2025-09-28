@@ -172,11 +172,10 @@ const MaquinariaPage = () => {
           title="Gestión de Maquinaria"
           subtitle="Maximiza la vida útil, controla costos y optimiza el rendimiento de tus equipos"
           features={heroFeatures}
-          ctaText="Solicitar Demo"
-          ctaHref="/contacto"
-          secondaryCtaText="Ver Video Demo"
-          secondaryCtaHref="#video-demo"
-          image="/images/machinery-dashboard.png"
+          primaryCTA="Solicitar Demo"
+          primaryHref="/contacto"
+          secondaryCTA="Ver Video Demo"
+          secondaryHref="#video-demo"
         />
 
         <FeaturesGrid

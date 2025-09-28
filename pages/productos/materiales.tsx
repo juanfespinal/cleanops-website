@@ -170,13 +170,11 @@ const MaterialesPage = () => {
         <ProductHero
           title="Gestión de Materiales"
           subtitle="Optimiza inventario, automatiza pedidos y reduce costos con control inteligente"
-          description="Sistema completo para gestionar materiales de limpieza con inventario en tiempo real, pedidos automáticos y análisis de consumo."
           features={heroFeatures}
-          ctaText="Solicitar Demo"
-          ctaHref="/contacto"
-          secondaryCtaText="Ver Video Demo"
-          secondaryCtaHref="#video-demo"
-          image="/images/materials-dashboard.png"
+          primaryCTA="Solicitar Demo"
+          primaryHref="/contacto"
+          secondaryCTA="Ver Video Demo"
+          secondaryHref="#video-demo"
         />
 
         <FeaturesGrid

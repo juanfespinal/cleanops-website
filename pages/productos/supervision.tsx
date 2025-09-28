@@ -170,13 +170,11 @@ const SupervisionPage = () => {
         <ProductHero
           title="Supervisión Inteligente"
           subtitle="Registra hallazgos, asigna responsables automáticamente y mejora la calidad con IA predictiva"
-          description="Sistema avanzado de supervisión que combina tecnología y procesos para garantizar estándares de calidad excepcionales."
           features={heroFeatures}
-          ctaText="Solicitar Demo"
-          ctaHref="/contacto"
-          secondaryCtaText="Ver Video Demo"
-          secondaryCtaHref="#video-demo"
-          image="/images/supervision-dashboard.png"
+          primaryCTA="Solicitar Demo"
+          primaryHref="/contacto"
+          secondaryCTA="Ver Video Demo"
+          secondaryHref="#video-demo"
         />
 
         <FeaturesGrid
