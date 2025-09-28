@@ -1,0 +1,131 @@
+Genera una web completa para CleanOps (SaaS para empresas de limpieza) usando Next.js + TailwindCSS + Framer Motion. 
+Entrega código modular y listo para desplegar en Vercel. Divide el proyecto en componentes reutilizables y páginas independientes.
+
+Requisitos generales
+- Tipografía: Inter o Poppins. Paleta: primario #1E90FF, texto gris oscuro, fondo blanco. Diseño premium, minimalista, mucho espacio en blanco.
+- Accesibilidad: cumplir WCAG AA (contrastes, aria-labels, foco en keyboard nav).
+- Performance: imágenes en WebP, lazy-loading, reducir JS innecesario, optimizar Core Web Vitals.
+- SEO: meta tags para cada página, Open Graph, Twitter Card, y JSON-LD para SoftwareApplication y Organization.
+- CMS: generar placeholders y estructura lista para conectar con Sanity o Contentful (schemas sugeridos para posts, casos, lead magnets).
+- Analítica & tracking: hooks para GA4 y GTM; eventos listos para click en CTA, descargas, envíos de formularios, reservas demo.
+- Formularios: integración por defecto con HubSpot / Zapier / Calendly (placeholder). Botones CTA deben abrir modal de demo o enlace a Calendly.
+
+Estructura del sitio (páginas y rutas)
+- pages/index.js                 -> Home (incluye sección de Supervisión destacada)
+- pages/productos/rutinas.js     -> CleanOps Rutinas (incluye Asistencia, Rutinas, Portal del cliente, Reportes de incidencias)
+- pages/productos/supervision.js -> CleanOps Supervisión Inteligente
+- pages/productos/materiales.js  -> Gestión de Materiales / Pedidos
+- pages/productos/maquinaria.js  -> Gestión y Mantenimiento de Maquinaria
+- pages/casos.js                 -> Casos de éxito (listado)
+- pages/blog/index.js            -> Blog (lista)
+- pages/recursos.js              -> Hub de recursos / lead magnets
+- pages/precios.js               -> Pricing / planes (estructura flexible)
+- pages/contacto.js              -> Contacto / demo booking
+- components/*                   -> Hero, FeaturesGrid, ProductHero, CaseCard, CTA, BlogCard, Footer, Navbar, LeadMagnetForm, AnalyticsHooks
+
+Contenido por página (detallado)
+
+1) Home (pages/index.js)
+- Hero full-screen (2 columnas): 
+  - Left: H1 claro: “Digitaliza y controla la operación de tu empresa de limpieza”
+  - Subtítulo: “Automatiza rutinas, control de asistencia, pedidos y supervisión para ahorrar tiempo, reducir errores y mejorar la calidad del servicio.”
+  - CTAs: [Solicitar demo] (primario), [Calcular ahorro] (secundario)
+  - Right: mockup del dashboard (frame redondeado + shadow). Animación: fade-up (texto) + slide-in-right (mockup).
+- Barra de confianza: 4 logos (placeholder).
+- Sección “Qué hacemos” (3–4 cards): Rutinas (incluye asistencia y portal cliente), Materiales, Maquinaria, Supervisión Inteligente — cada card con ícono y microcopy.
+- Sección destacada de Supervisión en Home (obligatorio): 
+  - Headline corto: “Supervisión que impulsa la mejora continua”
+  - Bullets: registro de hallazgos, asignación de responsables, workflow para cierre obligatorio de hallazgos, modelo recomendador de zonas críticas.
+  - Mini mockup de panel de hallazgos.
+  - CTA: “Ver Supervisión”
+- Productos destacados (3 columnas con mini-descripción y botón “Ver más”)
+- Casos rápidos (3 cards con métricas).
+- Lead magnet + formulario: “Checklist digitalización para empresas de limpieza” (gated, email required).
+- Blog preview (3 posts).
+- CTA intermedio (fondo azul): “Digitaliza tu empresa de limpieza hoy” + botón de demo.
+- Footer con links, redes y legal.
+
+2) Página producto: CleanOps Rutinas (pages/productos/rutinas.js)
+- Hero: 
+  - H1: “Organiza y controla toda tu operación de limpieza en un solo lugar”
+  - Sub: “Incluye control de asistencia, gestión de rutinas y portal del cliente, todo integrado y en tiempo real.”
+  - CTAs: “Solicitar demo” y “Calcular ahorro”
+  - Mockup: módulo Rutinas + reportes de asistencia.
+- Features (grid 3–4):
+  - Control de asistencia: QR/GPS, funcionalidad offline, reportes automatizados de horas. 
+  - Rutinas de limpieza: Documentación centralizada, delimitación de zonas con QR/NFC, dashboards interactivos, control de tiempos.
+  - Portal del cliente: visibilidad de cumplimiento, incidencias, acceso a documentos y solicitudes adicionales.
+  - Reportes de incidencias: registro, notificaciones automáticas a intervenores.
+- Casos de uso (2–3 bloques: problema → solución → resultado).
+- Beneficios cuantificables (iconos + cifras estimadas).
+- Testimonio (card).
+- CTA final (fondo azul): “Solicitar demo”.
+
+3) Página producto: Supervisión Inteligente (pages/productos/supervision.js)
+- Hero:
+  - H1: “Supervisión que transforma hallazgos en acciones”
+  - Sub: “Registra visitas, documenta hallazgos y asegura su cierre con workflows responsables — nada queda en un reporte olvidado.”
+  - Mockup: panel de hallazgos + workflow de cierre.
+- Features:
+  - Registro de visitas con QR/GPS.
+  - Clasificación y priorización de hallazgos.
+  - Asignación de responsables y fechas límite.
+  - Workflow de mejora continua: estados (abierto → en progreso → verificado → cerrado) con notificaciones y auditoría.
+  - Modelo recomendador (IA) para priorizar zonas con mayor probabilidad de hallazgos.
+  - Escalamiento automático si no se cierra en tiempo.
+- Casos de uso concretos ilustrando la mejora continua.
+- Métricas esperadas (ej.: % de hallazgos cerrados, reducción de reincidencias).
+- CTA final.
+
+4) Página producto: Gestión de Materiales / Pedidos (pages/productos/materiales.js)
+- Hero: “Controla inventarios y pedidos sin esfuerzo”
+- Features:
+  - Catálogo de insumos, control de stock, alertas por umbral, reorder automation.
+  - Workflow de pedidos con aprobación (roles).
+  - Integración con compras/ERP (placeholder).
+  - Historial y trazabilidad de consumo por contrato/cliente.
+- Casos de uso y beneficios (reducción pérdidas, menos rupturas de stock).
+
+5) Página producto: Gestión de Maquinaria (pages/productos/maquinaria.js)
+- Hero: “Maximiza la vida útil y disponibilidad de tu maquinaria”
+- Features:
+  - Registro de activos con QR/NFC.
+  - Programación de mantenimiento preventivo y correctivo.
+  - Logs de uso, costos y horas-operación.
+  - Notificaciones para mantenimientos, partes, técnicos asignados.
+  - Integración de costos y reportes de ROI de mantenimiento.
+- Casos de uso: menor downtime, menores costos de reparación.
+
+Contenido técnico y requisitos de código
+- Componentes: crear componentes reutilizables (Hero, FeatureCard, ProductDetail, CaseStudy, MetricCard, CTA, LeadMagnetForm, BlogList).
+- Animaciones: usar Framer Motion para entradas (fade/slide), microinteracciones en botones y cards.
+- Responsive: mobile-first, breakpoints claros. Mockups escalables.
+- SEO: cada page debe tener getStaticProps/getStaticPaths si aplica (SSG para producto y blog), meta dinámicos y JSON-LD.
+- CMS-ready: incluir archivos de ejemplo /fixtures (posts, casos, lead magnets) para cargar en Sanity/Contentful.
+- Tests: incluir snapshots básicos y linting (ESLint, Prettier).
+
+Copy y microcopy (CTA y meta)
+- CTA primario: “Solicitar demo”
+- CTA secundario: “Calcular ahorro”
+- Meta title ejemplo (página rutinas): “CleanOps Rutinas — Control de asistencia, rutinas y portal cliente”
+- Meta description ejemplo: “CleanOps Rutinas centraliza control de asistencia, documentación de rutinas y portal cliente para mejorar cumplimiento y visibilidad en tiempo real.”
+
+Integraciones / Funnels
+- Lead magnets: Checklist, Calculadora ROI (formulario con inputs: # empleados, horas, coste hora), Webinar.
+- Formularios conectados a HubSpot/Calendly + webhook a CRM.
+- Eventos GA4: demo_click, leadmagnet_download, calculadora_submit, calendario_booking.
+
+Notas específicas tomadas de tu Propuesta Comercial (usar en copy y features)
+- Incluir funcionalidad offline en control de asistencia (sincroniza al reconectarse). 
+- Portal cliente con visibilidad de cumplimiento, incidencias y acceso a documentos de empleados. 
+- Supervisión: workflow para que los hallazgos no queden en un informe sin cerrar (mejora continua y cierre obligatorio). 
+- ANS y enfoque en seguridad y cifrado de datos (incluir apartado “Seguridad y datos” en footer o producto). 
+
+Entrega esperada de la AI
+- Código Next.js (páginas + components) con estructura limpia.
+- Archivos de estilos Tailwind configurados.
+- Uso de Framer Motion en animaciones clave.
+- Archivos README con instrucciones para conectar CMS y despliegue en Vercel.
+- Placeholders para logos/imagenes y fixtures para posts/casos.
+
+Favor de generar todo el código base para las páginas y componentes indicados, sin eliminar la posibilidad de personalizar más tarde (código legible y comentado).
