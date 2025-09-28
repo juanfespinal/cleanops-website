@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import ProductHero from '@/components/ProductHero'
 import FeaturesGrid from '@/components/FeaturesGrid'

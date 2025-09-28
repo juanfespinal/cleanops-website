@@ -1,20 +1,24 @@
 import { motion } from 'framer-motion'
 
 interface TestimonialCardProps {
-  quote: string
+  quote?: string
+  content?: string
   author: string
   company: string
   role: string
   avatar?: string
   rating?: number
+  index?: number
 }
 
 const TestimonialCard = ({
   quote,
+  content,
   author,
   company,
   role,
   avatar,
+  index = 0,
   rating = 5
 }: TestimonialCardProps) => {
   return (
@@ -41,7 +45,7 @@ const TestimonialCard = ({
 
       {/* Quote */}
       <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
-        "{quote}"
+        &ldquo;{content || quote}&rdquo;
       </blockquote>
 
       {/* Author Info */}

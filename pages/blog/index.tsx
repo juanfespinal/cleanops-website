@@ -45,7 +45,7 @@ const BlogPage = ({ posts, featuredPosts, categories }: BlogPageProps) => {
       "datePublished": post.publishedDate,
       "author": {
         "@type": "Person",
-        "name": post.author.fields.name
+        "name": post.author?.fields?.name || "CleanOps"
       }
     }))
   }

@@ -171,7 +171,6 @@ const MaquinariaPage = () => {
         <ProductHero
           title="Gestión de Maquinaria"
           subtitle="Maximiza la vida útil, controla costos y optimiza el rendimiento de tus equipos"
-          description="Sistema integral para gestionar todos los aspectos de tu flota de equipos de limpieza desde registro hasta disposición final."
           features={heroFeatures}
           ctaText="Solicitar Demo"
           ctaHref="/contacto"

@@ -4,6 +4,7 @@ interface SEOProps {
   title: string
   description: string
   url?: string
+  canonical?: string
   image?: string
   type?: 'website' | 'article'
   jsonLd?: object | object[]
@@ -13,6 +14,7 @@ const SEO = ({
   title,
   description,
   url = 'https://cleanops.com',
+  canonical,
   image = 'https://cleanops.com/images/og-image.jpg',
   type = 'website',
   jsonLd
@@ -24,7 +26,7 @@ const SEO = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={canonical || url} />
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />

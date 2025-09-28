@@ -75,7 +75,7 @@ export async function getBlogPosts(preview = false): Promise<BlogPost[]> {
     const currentClient = preview ? previewClient : client
     const entries = await currentClient.getEntries({
       content_type: 'blogPost',
-      order: '-fields.publishedDate',
+      order: ['-fields.publishedDate'],
       include: 2
     })
 
@@ -143,7 +143,7 @@ export async function getFeaturedBlogPosts(limit = 3, preview = false): Promise<
     const entries = await currentClient.getEntries({
       content_type: 'blogPost',
       'fields.featured': true,
-      order: '-fields.publishedDate',
+      order: ['-fields.publishedDate'],
       limit,
       include: 2
     })
@@ -177,7 +177,7 @@ export async function getBlogPostsByCategory(categorySlug: string, preview = fal
     const entries = await currentClient.getEntries({
       content_type: 'blogPost',
       'fields.category.fields.slug': categorySlug,
-      order: '-fields.publishedDate',
+      order: ['-fields.publishedDate'],
       include: 2
     })
 
@@ -209,7 +209,7 @@ export async function getBlogCategories(preview = false): Promise<BlogCategory[]
     const currentClient = preview ? previewClient : client
     const entries = await currentClient.getEntries({
       content_type: 'blogCategory',
-      order: 'fields.name'
+      order: ['fields.name']
     })
 
     return entries.items
@@ -231,7 +231,7 @@ export async function getBlogTags(preview = false): Promise<BlogTag[]> {
     const currentClient = preview ? previewClient : client
     const entries = await currentClient.getEntries({
       content_type: 'blogTag',
-      order: 'fields.name'
+      order: ['fields.name']
     })
 
     return entries.items

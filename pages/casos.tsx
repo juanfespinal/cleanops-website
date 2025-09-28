@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import SEO from '@/components/SEO'
@@ -282,12 +283,12 @@ const CasosPage = () => {
                 >
                   Solicitar Demo Personalizada
                 </a>
-                <a
+                <Link
                   href="/recursos"
                   className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300"
                 >
                   Descargar Casos Completos
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
