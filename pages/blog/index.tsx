@@ -53,9 +53,10 @@ const BlogPage = ({ posts, featuredPosts, categories }: BlogPageProps) => {
   return (
     <>
       <SEO
-        title="Blog - CleanOps"
-        description="Consejos, tendencias y mejores prácticas para la industria de la limpieza. Mantente actualizado con las últimas innovaciones en gestión de operaciones de limpieza."
+        title="Blog Empresas de Limpieza | Consejos para Aumentar Ganancias | CleanOps"
+        description="📚 Consejos expertos para empresas de limpieza: cómo automatizar operaciones, reducir costos 45%, mejorar calidad y aumentar ganancias. Guías paso a paso."
         canonical="https://cleanops.com/blog"
+        keywords="consejos empresas limpieza, como automatizar empresa limpieza, aumentar ganancias limpieza, reducir costos operativos, mejorar eficiencia limpieza, tendencias industria limpieza"
         jsonLd={jsonLd}
       />
 

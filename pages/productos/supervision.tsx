@@ -33,6 +33,93 @@ const SupervisionPage = () => {
     }
   }
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona la inteligencia artificial en la supervisión de CleanOps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La IA analiza patrones históricos de hallazgos, ubicaciones problemáticas y tendencias de calidad para recomendar qué áreas supervisar prioritariamente. Optimiza recursos y predice problemas antes de que ocurran."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué tipo de evidencia se puede registrar en los hallazgos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Se pueden adjuntar fotografías, videos, ubicación GPS exacta, descripción detallada, nivel de severidad y fecha/hora automática. Todo queda documentado para auditorías y seguimiento."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se asignan automáticamente los responsables de cada hallazgo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El sistema asigna responsables basado en roles, ubicación del hallazgo, carga de trabajo actual y expertise. Incluye fechas límite automáticas y escalamiento si no se resuelve a tiempo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿En cuánto se pueden reducir las quejas de clientes con supervisión inteligente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los clientes de CleanOps han reducido las quejas hasta 70% implementando supervisión proactiva. Al detectar y corregir problemas antes de que los clientes los noten, mejora significativamente la satisfacción."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿El workflow de cierre de hallazgos es obligatorio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, ningún hallazgo puede cerrarse sin completar el workflow: evidencia de corrección, verificación del supervisor, confirmación con foto y firma digital del responsable. Garantiza resolución completa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué métricas incluyen los dashboards de supervisión?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Incluyen: hallazgos por área/supervisor, tiempo promedio de resolución, tendencias de calidad, cumplimiento de estándares, ranking de ubicaciones problemáticas y métricas de satisfacción del cliente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se puede personalizar los tipos de hallazgos según mi empresa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Completamente personalizable. Puede crear categorías específicas, niveles de severidad personalizados, workflows por tipo de hallazgo y formularios adaptados a sus estándares de calidad particulares."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Los supervisores pueden trabajar offline en terreno?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, la app móvil funciona completamente offline. Los hallazgos se registran localmente con fotos y GPS, sincronizándose automáticamente cuando hay conexión disponible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo mejora la eficiencia del equipo de supervisión?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reduce hasta 45% el tiempo de supervisión mediante recomendaciones de IA, elimina reportes manuales, automatiza asignaciones y proporciona rutas optimizadas para revisiones múltiples."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se integra con sistemas de calidad existentes (ISO, HACCP)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, CleanOps se adapta a estándares ISO 9001, HACCP, protocolos hospitalarios y otras certificaciones. Genera reportes compatibles con auditorías y mantiene trazabilidad completa."
+        }
+      }
+    ]
+  }
+
   const heroFeatures = [
     "Registro detallado de hallazgos con evidencia fotográfica",
     "Asignación automática de responsables y fechas límite",
@@ -159,10 +246,11 @@ const SupervisionPage = () => {
   return (
     <>
       <SEO
-        title="Supervisión Inteligente - CleanOps"
-        description="Sistema inteligente de supervisión con IA para registro de hallazgos, workflow de mejora continua y recomendación de áreas críticas. Mejora la calidad y reduce quejas."
+        title="Supervisión Inteligente con IA para Empresas de Limpieza | Reduce 70% Quejas"
+        description="🤖 IA que detecta áreas críticas, registra hallazgos con evidencia y asigna responsables automáticamente. Reduce 70% quejas y mejora calidad. ¡Demo Gratis!"
         canonical="https://cleanops.com/productos/supervision"
-        jsonLd={jsonLd}
+        keywords="supervisión inteligente IA, supervisión limpieza automática, reducir quejas clientes, hallazgos supervisión, IA empresas limpieza, calidad supervisión automática"
+        jsonLd={[jsonLd, faqJsonLd]}
       />
 
       <Navbar />

@@ -1,0 +1,18 @@
+# robots.txt for CleanOps
+User-agent: *
+Allow: /
+
+# Block crawling of admin/private areas
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow important SEO files
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Sitemap location
+Sitemap: https://cleanops.com/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 1

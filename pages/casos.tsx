@@ -98,9 +98,10 @@ const CasosPage = () => {
   return (
     <>
       <SEO
-        title="Casos de Éxito - CleanOps"
-        description="Descubre cómo empresas de limpieza han transformado sus operaciones y mejorado sus resultados con CleanOps. Casos reales de éxito y testimonios verificados."
+        title="Casos de Éxito Empresas de Limpieza | Clientes que Aumentaron Ganancias 45%"
+        description="🏆 Casos reales: empresas que redujeron costos 45%, mejoraron eficiencia 65% y aumentaron satisfacción 95% con CleanOps. Testimonios verificados."
         canonical="https://cleanops.com/casos"
+        keywords="casos éxito empresas limpieza, testimonios CleanOps, empresas limpieza exitosas, resultados CleanOps, clientes CleanOps, transformación digital limpieza"
         jsonLd={jsonLd}
       />
 

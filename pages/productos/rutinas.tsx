@@ -32,6 +32,93 @@ const RutinasPage = () => {
     }
   }
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona el control de asistencia con QR y GPS en CleanOps Rutinas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los empleados escanean códigos QR únicos en cada ubicación y la app verifica su posición GPS automáticamente. Funciona offline y sincroniza al reconectar. Genera reportes precisos de horas trabajadas por empleado y contrato."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa si no hay conexión a internet durante el trabajo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CleanOps Rutinas funciona completamente offline. Los datos se almacenan localmente y se sincronizan automáticamente cuando se restaura la conexión, sin pérdida de información."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo pueden mis clientes ver el progreso de limpieza en tiempo real?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El portal del cliente muestra el estado de rutinas en tiempo real, empleados asignados, horarios completados y puede recibir fotos de áreas limpias. Acceso 24/7 desde cualquier dispositivo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo se ahorra en tareas administrativas con CleanOps Rutinas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Las empresas reducen hasta 45% el tiempo administrativo eliminando reportes manuales, control manual de asistencia y seguimiento de rutinas. Los reportes se generan automáticamente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se puede personalizar las rutinas de limpieza para cada cliente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, cada cliente puede tener rutinas completamente personalizadas con tareas específicas, frecuencias, áreas delimitadas y empleados asignados según sus necesidades particulares."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se controlan las incidencias y problemas durante el servicio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los empleados pueden reportar incidencias con fotos, ubicación y descripción. Se notifica automáticamente a supervisores y clientes. Todo queda documentado para seguimiento y resolución."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué información incluyen los reportes automatizados?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los reportes incluyen horas trabajadas por empleado, rutinas completadas, incidencias encontradas, fotos de evidencia, cumplimiento de horarios y métricas de satisfacción del cliente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Los empleados necesitan entrenamiento especial para usar la app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, la interfaz es intuitiva y fácil de usar. Incluimos capacitación inicial y soporte continuo. La mayoría de empleados aprende a usarla en menos de 30 minutos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se puede integrar con sistemas de nómina existentes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, CleanOps exporta datos de horas trabajadas en formatos compatibles con la mayoría de sistemas de nómina. También ofrecemos integraciones directas con sistemas populares."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo garantizan la seguridad de los datos de mi empresa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utilizamos encriptación de nivel bancario, servidores seguros certificados, copias de seguridad automáticas y cumplimos con GDPR. Sus datos están completamente protegidos y son de su propiedad."
+        }
+      }
+    ]
+  }
+
   const heroFeatures = [
     "Control de asistencia con QR/GPS y funcionalidad offline",
     "Rutinas centralizadas con delimitación de áreas",
@@ -245,10 +332,11 @@ const RutinasPage = () => {
   return (
     <>
       <SEO
-        title="CleanOps Rutinas — Control de asistencia, rutinas y portal cliente"
-        description="CleanOps Rutinas centraliza control de asistencia, documentación de rutinas y portal cliente para mejorar cumplimiento y visibilidad en tiempo real."
+        title="Control de Asistencia QR/GPS para Empresas de Limpieza | CleanOps Rutinas"
+        description="🔥 Control de asistencia con QR/GPS, rutinas automatizadas y portal cliente en tiempo real. Reduce 45% tiempo administrativo. ¡Prueba Gratis 15 días!"
         url="https://cleanops.com/productos/rutinas"
-        jsonLd={jsonLd}
+        keywords="control asistencia QR, control asistencia GPS, rutinas limpieza automatizadas, portal cliente tiempo real, software control empleados, gestión rutinas limpieza"
+        jsonLd={[jsonLd, faqJsonLd]}
       />
 
       <Navbar />

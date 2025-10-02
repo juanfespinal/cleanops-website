@@ -79,12 +79,12 @@ const Footer = () => {
             className="lg:col-span-2"
           >
             <Link href="/" className="flex items-center mb-6">
-              <motion.span
-                className="text-2xl font-bold text-white font-display"
+              <motion.img
+                src="/logo-white.svg"
+                alt="CleanOps"
+                className="h-8 w-auto"
                 whileHover={{ scale: 1.05 }}
-              >
-                CleanOps
-              </motion.span>
+              />
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Digitaliza y controla la operación de tu empresa de limpieza con

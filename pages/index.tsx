@@ -54,9 +54,59 @@ const HomePage = ({ latestPosts }: HomePageProps) => {
     "foundingDate": "2024",
     "industry": "Software",
     "areaServed": "América Latina",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "areaServed": "América Latina",
+      "availableLanguage": ["Spanish", "English"]
+    },
     "sameAs": [
       "https://linkedin.com/company/cleanops",
       "https://twitter.com/cleanops"
+    ]
+  }
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo puede CleanOps reducir los costos de mi empresa de limpieza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CleanOps reduce costos administrativos hasta 45% mediante automatización de rutinas, control inteligente de asistencia, optimización de materiales y supervisión eficiente. Elimina tareas manuales y errores humanos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué incluye el software de gestión de CleanOps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CleanOps incluye: Control de asistencia con QR/GPS, gestión de rutinas automatizadas, portal del cliente, supervisión inteligente con IA, gestión de materiales e inventarios, control de maquinaria y reportes en tiempo real."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo toma implementar CleanOps en mi empresa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La implementación de CleanOps toma entre 1-2 semanas. Incluye configuración personalizada, migración de datos, capacitación del equipo y acompañamiento durante el primer mes de operación."
+        }
+      }
+    ]
+  }
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://cleanops.com"
+      }
     ]
   }
 
@@ -136,10 +186,11 @@ const HomePage = ({ latestPosts }: HomePageProps) => {
   return (
     <>
       <SEO
-        title="CleanOps - Digitaliza y controla la operación de tu empresa de limpieza"
-        description="Automatiza rutinas, control de asistencia, pedidos y supervisión para ahorrar tiempo, reducir errores y mejorar la calidad del servicio en tu empresa de limpieza."
+        title="CleanOps - Software para Empresas de Limpieza | Automatiza y Aumenta Ganancias 45%"
+        description="💰 Reduce costos 45% y aumenta ganancias con CleanOps. Software líder para empresas de limpieza: control de asistencia, rutinas automatizadas, supervisión inteligente. ¡Demo Gratis!"
         url="https://cleanops.com"
-        jsonLd={[jsonLd, organizationJsonLd]}
+        keywords="software empresas limpieza, automatizar empresa limpieza, control asistencia QR, gestión rutinas limpieza, supervisión inteligente, aumentar ganancias limpieza, reducir costos operativos, portal cliente limpieza"
+        jsonLd={[jsonLd, organizationJsonLd, faqJsonLd, breadcrumbJsonLd]}
       />
 
       <Navbar />

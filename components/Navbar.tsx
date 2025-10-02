@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-12">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <span className="text-2xl font-bold text-primary font-display">CleanOps</span>
+                <img src="/logo.svg" alt="CleanOps" className="h-8 w-auto" />
               </Link>
             </div>
 
