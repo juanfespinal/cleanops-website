@@ -40,4 +40,5 @@ yarn-error.log*
 .idea/
 
 # Claude
-.claude/
+.claude/.env
+.env.local
